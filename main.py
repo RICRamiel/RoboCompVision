@@ -21,20 +21,20 @@ if __name__ == '__main__':
 
             if xc > 420:
                 if yc < 120:
-
+                    ser.send_data(2048)
                     print("Пинаю правой ногой")
                 else:
-                    ser.send_data(16)
+                    ser.send_data(512)
                     print("Иду к вперёд (мяч по правой ноге)")
 
             if xc < 420 and xc > 210:
-                ser.send_data(128)
+                ser.send_data(768)
                 print("Смещаюсь вправо")
 
             if xc < 210:
                 if yc < 120:
-                    ser.send_data(512)
+                    ser.send_data(1024)
                     print("Пинаю левой ногой")
                 else:
-                    ser.send_data(16)
+                    ser.send_data(512)
                     print("Иду к вперёд (мяч по левой ноге)")
